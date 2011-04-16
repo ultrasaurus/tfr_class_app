@@ -1,5 +1,7 @@
-require 'spec_helper'  #<label id="code.spec_helper"/> 
+require 'spec_helper'
 
-describe Course do  #<label id="code.course_describe"/> 
-  pending "add some examples to (or delete) #{__FILE__}"  #<label id="code.course_spec_default_pending"/> 
+describe Course do  
+  it 'should save a valid record when created with title and description' do
+    c = Course.create!(:title => "Creative Writing", :description => "Learn to write fiction!") 
+  end
 end
