@@ -1,3 +1,3 @@
 class Person < ActiveRecord::Base
-  validates_presence_of :given_name
+  #validates_presence_of :given_name
 end
