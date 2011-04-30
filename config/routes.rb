@@ -1,4 +1,5 @@
 
 ClassApp::Application.routes.draw do
-  resources :people
+  #resources :people
+  match "courses" => "courses#index"
 end
