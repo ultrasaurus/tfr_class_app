@@ -1,6 +1,5 @@
 require 'spec_helper'
 
-# START:validates
 describe Person do
 
   it 'should save a valid record with first_name and last name' do
@@ -13,6 +12,13 @@ describe Person do
     p.should_not be_valid
     p.errors[:given_name].should include("can't be blank")
   end
+# START:fullname
+  it 'should construct a full name' do
+    p = Person.new(:given_name => "Eve", :surname => "Smith")
+    p.full_name.should == "Eve Smith"
+  end
+# END:fullname
+  
 end
 # END:validates
 
