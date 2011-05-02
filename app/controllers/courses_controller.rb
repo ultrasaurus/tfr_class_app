@@ -1,5 +1,5 @@
 class CoursesController < ApplicationController
   def show
-    logger.info "==================> show method!"
+    render 'show'
   end
 end
